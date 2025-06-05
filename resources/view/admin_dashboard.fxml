@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.AdminDashboardController"
+      spacing="10" alignment="TOP_CENTER" style="-fx-padding: 20;">
+
+    <Label text="Admin Dashboard" style="-fx-font-size: 18px;"/>
+
+    <HBox spacing="10">
+        <Button text="Add Event" onAction="#handleAddEvent"/>
+        <Button text="Modify Event" onAction="#handleModifyEvent"/>
+        <Button text="Delete Event" onAction="#handleDeleteEvent"/>
+        <Button text="Logout" onAction="#handleLogout"/>
+        <Button text="View All Orders" onAction="#handleViewAllOrders"/>
+        <Button text="Reset Events" onAction="#handleResetEvents" />
+
+
+    </HBox>
+
+    <TableView fx:id="eventTable" prefHeight="400" prefWidth="800">
+        <columns>
+            <TableColumn fx:id="titleCol" text="Title" prefWidth="200"/>
+            <TableColumn fx:id="venueCol" text="Venue" prefWidth="120"/>
+            <TableColumn fx:id="dayCol" text="Day" prefWidth="80"/>
+            <TableColumn fx:id="priceCol" text="Price" prefWidth="80"/>
+            <TableColumn fx:id="capacityCol" text="Capacity" prefWidth="80"/>
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="80"/>
+            <TableColumn fx:id="actionCol" text="Toggle" prefWidth="100"/>
+        </columns>
+    </TableView>
+</VBox>

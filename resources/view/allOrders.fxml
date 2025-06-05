@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.AllOrdersController"
+      spacing="10" style="-fx-padding: 20;">
+    <Label text="All Orders (Admin View)" style="-fx-font-size: 18px;"/>
+    <TableView fx:id="orderTable" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="orderNumCol" text="Order #" prefWidth="100"/>
+            <TableColumn fx:id="userCol" text="Username" prefWidth="120"/>
+            <TableColumn fx:id="eventCol" text="Event" prefWidth="200"/>
+            <TableColumn fx:id="qtyCol" text="Qty" prefWidth="60"/>
+            <TableColumn fx:id="priceCol" text="Total $" prefWidth="80"/>
+            <TableColumn fx:id="timestampCol" text="Timestamp" prefWidth="160"/>
+        </columns>
+    </TableView>
+
+
+</VBox>

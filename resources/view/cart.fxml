@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="435.0" prefWidth="730.0" spacing="20" style="-fx-padding: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CartController">
+    <Label style="-fx-font-size: 22px;" text=" Shopping Cart" />
+
+    <TableView fx:id="cartTable" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="eventCol" prefWidth="150" text="Event" />
+            <TableColumn fx:id="venueCol" prefWidth="100" text="Venue" />
+            <TableColumn fx:id="dayCol" prefWidth="80" text="Day" />
+            <TableColumn fx:id="quantityCol" prefWidth="100" text="Quantity" />
+            <TableColumn fx:id="priceCol" prefWidth="120" text="Total Price" />
+            <TableColumn fx:id="actionCol" prefWidth="120" text="Action" />
+        </columns>
+    </TableView>
+
+    <Button onAction="#checkoutFromCart" text="Proceed to Checkout" />
+    <Button fx:id="backButton" text="Back" onAction="#handleBackToDashboard" prefWidth="80" />
+
+</VBox>
+
